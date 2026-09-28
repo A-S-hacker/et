@@ -1,0 +1,23 @@
+For example, suppose your `sales` collection contains:
+
+```
+{ customer: "Amit", amount: 500 }
+{ customer: "Amit", amount: 800 }
+{ customer: "Amit", amount: 300 }
+{ customer: "Rahul", amount: 700 }
+{ customer: "Rahul", amount: 900 }
+```
+
+Using `$first` and `$last`
+
+```
+db.sales.aggregate([
+  {
+    $group: {
+      _id: "$customer",
+      firstAmount: { $first: "$amount" },
+      lastAmount: { $last: "$amount" }
+    }
+  }
+])
+```
