@@ -1,0 +1,8 @@
+db.collection.aggregate([
+  {
+    $group: {
+      _id: null,
+      averageValue: { $avg: "$fieldName" }
+    }
+  }
+])
