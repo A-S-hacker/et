@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $("button").mousedown(function() {
+                $("p").toggle();
+            });
+
+            $("button").mouseup(function() {
+                $("p").toggle();
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <h2>Mouse Events Example</h2>
+
+    <p>This paragraph will show and hide.</p>
+
+    <button>Click and Hold Me</button>
+
+</body>
+</html>
