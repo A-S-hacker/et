@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery JSON Example</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            // Create a JavaScript object
+            var student = {
+                "name": "Abhishek",
+                "age": 22,
+                "course": "Cyber Security"
+            };
+
+            // Convert JavaScript object into JSON string
+            var jsonData = JSON.stringify(student);
+
+            // Insert JSON data into HTML
+            $("#result").text(jsonData);
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <h1>JSON Example using jQuery</h1>
+
+    <p id="result"></p>
+
+</body>
+</html>
+
+
